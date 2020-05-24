@@ -17,6 +17,8 @@ Python is not my native language, so it may be some C++-ish.
 
 SynoShare.py <path / filename_to_share> [--debug]
 
+NB: File paths are relative to the Synology File Station root folder. So if you have a top-level folder in the File Station named "Backup" and a file in "Backup" folder names "text.txt", the path to the file is "/Backup/text.txt".
+
 ## Copyright
 
 (c) 2020, Ded (Ilya Dedinsky, mail@ded32.ru)
