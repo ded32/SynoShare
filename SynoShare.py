@@ -19,9 +19,9 @@ import os;
 #-------------------------------------------------------------
 # These values are imported from OS environment variables to avoid exposing of private data:
 #
-# .SynoShareNAS     - Synology NAS IP or DNS name
-# .SynoShareAccount - Synology NAS Account used for creating links
-# .SynoSharePasswd  - Synology NAS Account password
+# SynoShareNAS     - Synology NAS IP or DNS name
+# SynoShareAccount - Synology NAS Account used for creating links
+# SynoSharePasswd  - Synology NAS Account password
 #
 # Set these variables BEFORE calling this script. They may be crypted, see below.
 #
@@ -30,9 +30,9 @@ import os;
 # function to support your scheme of encrypting login credentials.
 #-------------------------------------------------------------
 
-NAS     = str (os.getenv (".SynoShareNAS"));
-Account = str (os.getenv (".SynoShareAccount"));
-Passwd  = str (os.getenv (".SynoSharePasswd"));
+NAS     = str (os.getenv ("SynoShareNAS"));
+Account = str (os.getenv ("SynoShareAccount"));
+Passwd  = str (os.getenv ("SynoSharePasswd"));
 
 #-------------------------------------------------------------
 # Exit codes of the script
@@ -67,7 +67,7 @@ def main():
         return SyntaxError;
 
     if (NAS == "None" or Account == "None" or Passwd == "None"):
-        eprint ("ERROR: .SynoShareNAS, .SynoShareAccount or .SynoSharePasswd environment variable(s) NOT found");
+        eprint ("ERROR: SynoShareNAS, SynoShareAccount or SynoSharePasswd environment variable(s) NOT found");
         return SyntaxError;
 
     DoAuth (Account, Passwd);

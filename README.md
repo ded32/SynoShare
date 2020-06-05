@@ -28,9 +28,9 @@ NB: File paths are relative to the Synology File Station root folder. So if you 
 #### 1. This script uses the values are imported from OS environment variables to avoid exposing of private data:
 
 ```
-.SynoShareNAS     - Synology NAS IP or DNS name
-.SynoShareAccount - Synology NAS Account used for creating links
-.SynoSharePasswd  - Synology NAS Account password
+SynoShareNAS     - Synology NAS IP or DNS name
+SynoShareAccount - Synology NAS Account used for creating links
+SynoSharePasswd  - Synology NAS Account password
 ```
 
 Set these variables BEFORE calling this script. They may be crypted, see below.
